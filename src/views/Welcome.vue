@@ -121,7 +121,8 @@
                             </div>
 
 
-                            <table class="table table-condensed table-bordered"  v-if="orderInfo.length > 0" style="margin-top: 20px; margin-left: 20px; margin-right: 20px">
+                            <div class="table-responsive" v-if="orderInfo.length > 0" style="margin-top: 20px; margin-left: 20px; margin-right: 20px">
+                            <table class="table table-condensed table-bordered"  >
                                 <thead>
                                 <tr>
                                     <th>Description</th>
@@ -145,6 +146,7 @@
                                
                                 </tbody>
                             </table>
+                            </div>
 
 
                             
@@ -476,6 +478,10 @@ color: black;
 .vs-notifications p{
     color: white!important;
 }
+
+
+
+
 
  
 
