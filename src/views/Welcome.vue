@@ -200,8 +200,7 @@
                                             <label class="input-group-text" style="color: #92757d; font-size: 0.9rem" for="inputGroupSelect01">Payment Medium</label>
                                         </div>
                                         <select class="custom-select" v-model='formData.payment_medium'  id="inputGroupSelect01">
-                                            <option value="inquiry">bank transfer</option>
-                                                <option value="others">Others</option>
+                                            <option value="bank transfer">bank transfer</option>
                                         </select>
                                     </div>
                                 </div>
@@ -331,6 +330,8 @@ export default {
       validateForm(){
 
           let form = this.formData;
+        
+
 
           for (let x in form ){
               if(form[x] == ''){
@@ -344,6 +345,16 @@ export default {
 
           return true;
 
+      },
+
+      validateOrder(){
+          let x = this;
+
+          if(x.orderInfo.length > 0){
+              return true;
+          }
+
+          return false;
       },
 
 
@@ -363,8 +374,6 @@ export default {
 
         if(value == "SUBMIT_ORDER_FORM"){
 
-            console.log(this.api_params(value))
-
             /** Start loader gif */
           this.showLoading();
           
@@ -374,8 +383,6 @@ export default {
             /** If response contain status */
             if( response && 'status' in response){
 
-                console.log(response);
-              
                 /** If response status is 200 */
                 if(response.status == 200){
 
@@ -420,8 +427,13 @@ export default {
             }
 
             if(valResult == true){
+                if(x.validateOrder() == false){
+                      x.showNotif({type: 'warning', message: 'Kindly add your order' });
 
-                x.api_calls(value);
+                }else{
+                     x.api_calls(value);
+                }
+               
             }
       
             
@@ -462,8 +474,18 @@ color: black;
 
  .vs-notifications{
         padding: 5px 15px!important;
+        color: white!important;
     }
 
+
+.vs-notifications p {
+    font-size: 14px;
+    padding: 5px;
+    padding-right: 5px;
+    padding-right: 10px;
+    color: white;
+
+}
 
 
 </style>

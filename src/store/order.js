@@ -6,7 +6,6 @@ const mutations = {  }
 const actions = {
 
     async sano_alpha_order({commit},value){
-        console.log('Inside order.js')
 
             try {
                 var response = await axios
