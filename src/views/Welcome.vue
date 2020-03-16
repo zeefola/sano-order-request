@@ -451,7 +451,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 
 #inputGroupSelect01{
     /* padding: 22px!important; */
@@ -470,6 +470,11 @@ padding-left: 4px;
 border-left: 2px solid #f58634;
 padding-left: 20px;
 color: black;
+}
+
+
+.vs-notifications p{
+    color: white!important;
 }
 
  
