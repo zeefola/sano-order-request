@@ -41,7 +41,7 @@ export const vuesax ={
                     this.$vs.notify({
                         text: obj.message,
                         color: 'red',
-                        time: 50000,
+                        time: 5000,
                         position: obj.position ? obj.position : 'bottom-right' ,
           
                     })

@@ -22,7 +22,7 @@
                
                 <div class="col-xl-10 col-lg-10 col-md-10">
                     <form class="contact-form-wrap contact-form-bg">
-                        <h4>Application Form</h4> <br>
+                        <h4>Order Request Form</h4> <br>
                         <h6 class="h4">Customers Info</h6> 
 
                         <div class="row bigMarginButton" >
@@ -472,20 +472,7 @@ padding-left: 20px;
 color: black;
 }
 
- .vs-notifications{
-        padding: 5px 15px!important;
-        color: white!important;
-    }
-
-
-.vs-notifications p {
-    font-size: 14px;
-    padding: 5px;
-    padding-right: 5px;
-    padding-right: 10px;
-    color: white;
-
-}
+ 
 
 
 </style>
