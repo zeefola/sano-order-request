@@ -21,7 +21,7 @@
             <div class="row justify-content-center">
                
                 <div class="col-xl-10 col-lg-10 col-md-10">
-                    <form class="contact-form-wrap contact-form-bg">
+                    <form class="contact-form-wrap ">
                         <h4>Order Request Form</h4> <br>
                         <h6 class="h4">Customers Info</h6> 
 
@@ -97,9 +97,20 @@
                         <h6 class="h4">Order Info</h6>
                          <div class="row bigMarginButton">
                             <div class="col-lg-6 col-md-6">
-                                <div class="rld-single-input">
-                                    <input type="text" v-model='description' placeholder="Description">
+                                 <div class="rld-single-input">
+                                    <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" style="color: #92757d; font-size: 0.9rem" for="inputGroupSelect01">Description</label>
+                                    </div>
+                                    <select class="custom-select" v-model='description'  id="inputGroupSelect01">
+                                        <option  v-for="(list, index)  in descriptionList" :value="list" :key="index+'list'"> {{ list }}</option>
+                                        
+                                    </select>
+                                    </div>
                                 </div>
+                               
+
+                                
                             </div>
 
                             <div class="col-lg-2 col-md-2">
@@ -195,7 +206,7 @@
                         <h6 class="h4">Others</h6>
 
                         <div class="row " >
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-12 col-md-12">
                                 <div class="rld-single-input">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
@@ -209,7 +220,7 @@
                             </div>
 
 
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-12 col-md-12">
                                 <div class="rld-single-input">
                                     <input type="text" placeholder="Staff Code" v-model="formData.staff_code">
                                 </div>
@@ -256,7 +267,9 @@ export default {
   data(){
       return {
           visibility: true,
+          priceList: [],
           orderInfo: [],
+          descriptionList: [],
           formData: {
               customer_name: '',
               customer_email: '',
@@ -290,6 +303,28 @@ export default {
     "app-breadcrumb" : BreadCrumb
     
     
+  },
+
+  watch: {
+      priceList: function(new_pricelist){
+           
+          for(let x in new_pricelist){
+              this.descriptionList.push(this.priceList[x].name)
+          }
+
+      },
+
+      description: function(selected_description){
+          let x = this;
+          let priceListing = this.priceList;
+
+          for(let y in priceListing){
+              if(this.priceList[y].name == selected_description){
+                  x.rate = this.priceList[y].rate;
+              }
+          }
+      }
+
   },
 
   methods: {
@@ -441,12 +476,37 @@ export default {
             
         }
 
+    },
+
+    populatePriceList(){
+       
+        this.priceList = [
+            { name: 'Dressed Chicken', rate: '1000'},
+            { name: 'Smoked Chicken', rate: '2500'},
+            { name: 'Chicken Gizzard', rate: '1200'},
+            { name: 'Chicken Breast With Bone', rate: '1100'},
+            { name: 'Chicken Wings', rate: '1100'},
+
+            { name: 'Chicken Laps', rate: '1200'},
+            { name: 'Chicken Drumstick', rate: '1100'},
+            { name: 'Chicken Thigh', rate: '900'},
+
+            { name: '4 Parts Cut', rate: '1050'},
+            { name: '8 Parts Cut', rate: '1050'},
+
+            { name: 'Neck', rate: '450'},
+            { name: 'Feet', rate: '400'},
+            { name: 'Chicken Back', rate: '600'},
+        ];
+
+         console.log(this.priceList, 'pricelist')
     }
 
   },
   created(){
       //   (title, description)
       this.seoMetaData('Home',' '); 
+      this.populatePriceList();
 
   }
 };
@@ -464,13 +524,13 @@ export default {
 }
 
 .h4{
-    font-size: 16px;
+    font-size: 18px;
 line-height: 1.2380952380952381;
-background: #eeeeee5c;
+/* background: #eeeeee5c; */
 padding: 13px 4px;
-padding-left: 4px;
-border-left: 2px solid #f58634;
-padding-left: 20px;
+padding-left: 0px;
+border-bottom: 1px solid #f58634;
+
 color: black;
 }
 
