@@ -6,10 +6,10 @@
        
      <app-breadcrumb>
          <div class="breadcrumb-inner">
-            <h1 class="page-title">Order Request</h1>
+            <h1 class="page-title">Organic Chicken</h1>
             <ul class="page-list">
                 <li><a href="/">Home</a></li>
-                <li>Contact</li>
+                <li>Order Request</li>
             </ul>
         </div>
      </app-breadcrumb>

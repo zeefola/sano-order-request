@@ -4,7 +4,7 @@
 
     <!-- <app-preloader></app-preloader> -->
     <app-overlay></app-overlay>
-    <app-nav-bar></app-nav-bar>
+    <!-- <app-nav-bar></app-nav-bar> -->
 
 
        <!-- Entrance -->
