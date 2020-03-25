@@ -497,6 +497,8 @@ export default {
             { name: 'Neck', rate: '450'},
             { name: 'Feet', rate: '400'},
             { name: 'Chicken Back', rate: '600'},
+            { name: 'Delivery Fee ( 1 )', rate: '1000'},
+            { name: 'Delivery Fee ( 2 )', rate: '1500'},
         ];
 
          console.log(this.priceList, 'pricelist')
