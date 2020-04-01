@@ -499,14 +499,31 @@ export default {
             { name: 'Feet', rate: '400'},
             { name: 'Chicken Back', rate: '600'},
 
-             { name: 'Smoked Fish', rate: '1000'},
+            { name: 'Smoked Fish', rate: '1000'},
+
+            { name: 'Thyme', rate: '350'},
+            { name: 'Curry', rate: '350'},
+            { name: 'Turmeric', rate: '350'},
+            { name: 'Chilli pepper', rate: '300'},
+            { name: 'Sweet basil', rate: '500'},
+            { name: 'Tropical basil', rate: '350'},
+            { name: 'All soup seasoning', rate: '350'},
+            { name: 'Chicken seasoning', rate: '350'},
+            { name: 'Fried rice seasoning', rate: '350'},
+            { name: 'Jollof rice seasoning', rate: '350'},
+            { name: 'Pepper soup seasoning', rate: '350'},
+            { name: 'Fresh sweet basil', rate: '200'},
+            { name: 'Fresh lemongrass', rate: '200'},
+            { name: 'Fresh mint leaf', rate: '200'},
+            { name: 'Fresh scent leaf', rate: '200'},
+            { name: 'Fresh corn', rate: '200'},
 
             { name: 'Delivery Fee ( 1 )', rate: '1000'},
             { name: 'Delivery Fee ( 2 )', rate: '1500'},
 
         ];
 
-         console.log(this.priceList, 'pricelist')
+        //  console.log(this.priceList, 'pricelist')
     }
 
   },
