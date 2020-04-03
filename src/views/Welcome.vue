@@ -518,6 +518,7 @@ export default {
             { name: 'Fresh scent leaf', rate: '200'},
             { name: 'Fresh corn', rate: '200'},
             { name: 'Garri', rate: '300'},
+            { name: 'Pork', rate: '1400'},
 
 
             { name: 'Delivery Fee ( 1 )', rate: '1000'},
