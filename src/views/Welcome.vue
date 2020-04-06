@@ -497,7 +497,7 @@ export default {
 
             { name: 'Neck', rate: '450'},
             { name: 'Feet', rate: '400'},
-            { name: 'Chicken Back', rate: '600'},
+            { name: 'Chicken Back', rate: '750'},
 
             { name: 'Smoked Fish', rate: '1000'},
 
