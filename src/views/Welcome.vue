@@ -397,7 +397,7 @@ export default {
 
      api_params(value) {
         if(value == "SUBMIT_ORDER_FORM"){
-            return { ...this.formData, key: this.API_KEY, orders: this.orderInfo }
+            return { ...this.formData, key: this.API_KEY, outlet: this.OUTLET, orders: this.orderInfo }
         }
     },
 
