@@ -519,6 +519,9 @@ export default {
             { name: 'Fresh corn', rate: '200'},
             { name: 'Garri', rate: '300'},
             { name: 'Pork', rate: '1400'},
+            { name: 'Snail', rate: '3500'},
+            { name: 'Rabbit', rate: '3000'},
+            { name: 'OFSP Garri', rate: '500'},
 
 
             { name: 'Delivery Fee ( 1 )', rate: '1000'},
